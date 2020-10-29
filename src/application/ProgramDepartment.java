@@ -28,8 +28,12 @@ public class ProgramDepartment {
         departmentDao.insert(newDepartment);
         System.out.println(("Inserted! New id = " + newDepartment.getId()));
 
+        System.out.println("\n=== TEST 4: department Update ====");
+        department = departmentDao.findById(9);
+        department.setName("Home");
+        departmentDao.update(department);
+        System.out.println("Update completed");
 
-
-
+        
     }
 }
